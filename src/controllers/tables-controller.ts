@@ -1,5 +1,5 @@
 import { knex } from "@/database/knex";
-import { Response, Request, NextFunction } from "express";
+import { Request, Response, NextFunction } from "express";
 
 class TablesController {
   async index(request: Request, response: Response, next: NextFunction) {
@@ -15,4 +15,4 @@ class TablesController {
   }
 }
 
-export { TablesController }
+export { TablesController };

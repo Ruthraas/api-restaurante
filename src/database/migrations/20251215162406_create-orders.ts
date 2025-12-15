@@ -4,12 +4,12 @@ export async function up(knex: Knex): Promise<void> {
   await knex.schema.createTable("orders", (table) => {
     table.increments("id").primary(),
       table
-        .integer("tables_session_id")
+        .integer("table_session_id")
         .notNullable()
         .references("id")
         .inTable("tables_sessions"),
       table
-        .integer("products_id")
+        .integer("product_id")
         .notNullable()
         .references("id")
         .inTable("products"),
